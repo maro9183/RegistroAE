@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,1514" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,14 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -53,13 +61,83 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="546,1449" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Navegador Chrome: Mi MDA Iniciar Sesión en Mi MDA" sap:VirtualizedContainerService.HintSize="484,1338" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a3f31da5-bf02-4e9d-aad3-10da4c23b0ed" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,1121" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Iniciar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3f31da5-bf02-4e9d-aad3-10da4c23b0ed" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://mi.mda.gba.gob.ar/sistemas/mi/login" CvElementArea="710, 622, 91, 51" CvTextArea="728, 638, 57, 20" CvTextArgument="Iniciar" CvType="Button" DesignTimeRectangle="712, 624, 88, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Iniciar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-lg btn-primary' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Iniciar &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Iniciar' /&gt;" Guid="063cde01-2f0e-429a-974e-9cd672791f46" InformativeScreenshot="69a01dbd0c96fc06035031dc58208b36.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mi MDA Iniciar Sesión en Mi MDA' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Exportar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3f31da5-bf02-4e9d-aad3-10da4c23b0ed" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://mi.mda.gba.gob.ar/sistemas/mi/registro/agroecologico/" CvTextArea="1811, 323, 64, 19" CvTextArgument="Exportar" CvType="Text" DesignTimeRectangle="1778, 312, 109, 38" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Exportar'" FullSelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Exportar &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' parentid='content' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Exportar &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' parentid='content' tag='A' type='' class='btn btn-success' check:innerText='Exportar' /&gt;" Guid="485b0f2a-3546-4b96-8aa7-96dd57cd2f5f" InformativeScreenshot="8062ca4306b8b8f48de512f2e4e0e8c8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mi MDA Registro Agroecológico' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Todas las'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="a3f31da5-bf02-4e9d-aad3-10da4c23b0ed" Text="C:\Users\Usuario\Documents\Mariano" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvTextArea="190, 51, 139, 15" CvTextArgument="Este equipo Descargas" CvType="Text" DesignTimeRectangle="146, 41, 505, 34" DesignTimeScaleFactor="1" FriendlyName="'Todas las'" FullSelectorArgument="&lt;wnd cls='Breadcrumb Parent' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Breadcrumb Parent' check:fulltext='Todas las ubicaciones&amp;#xD;&amp;#xA;Este equipo&amp;#xD;&amp;#xA;Descargas' /&gt;" Guid="9941a6ef-dd15-4d45-b4ab-f10c31cd125b" InformativeScreenshot="52737c1fcc48088842c64ea1fb4069c9.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Actualizar &quot;Descargas&quot;'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3f31da5-bf02-4e9d-aad3-10da4c23b0ed" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="688, 41, 37, 37" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Actualizar &quot;Descargas&quot;'" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Barra de herramientas de área de dirección' /&gt;&lt;ctrl name='Barra de herramientas de área de dirección' role='tool bar' /&gt;&lt;ctrl name='Actualizar &amp;quot;Descargas&amp;quot; (F5)' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Barra de herramientas de área de dirección' /&gt;&lt;ctrl name='Barra de herramientas de área de dirección' role='tool bar' /&gt;&lt;ctrl name='Actualizar &amp;quot;Descargas&amp;quot; (F5)' role='push button' automationid='' check:text='Actualizar &amp;quot;Descargas&amp;quot; (F5)' /&gt;" Guid="0294ed8b-3b9d-4d0b-90f7-033c9e92444c" InformativeScreenshot="7e9e51c1d5fcae9f3f405124c595d661.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'unchecked'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3f31da5-bf02-4e9d-aad3-10da4c23b0ed" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="747, 494, 88, 26" CvTextArea="769, 500, 44, 12" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="747, 494, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='unchecked' /&gt;" Guid="31abac06-6fbe-4759-b168-d773f6171f4e" InformativeScreenshot="e8594bfbe3c4cfaf16289a9568da1cf5.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD1SURBVDhPldOhakJxHMXxuymYlnTgsA1EsAguLImwR1heM/gEg2UfQLBa7AZBfARhCBrEYlpZsVpWhqLf4//n8P51F/8HPsG/9xwu12t0lu7gqIwWmsgezv6NK9zgDjm8YoYtftBHBbrGSqdxAzWMMMEaO88SGk7Bise4gTb8km+FN9zCyoob6OBSybdAAVZWwgY+cQ8rK2ED33iGlZWwAdHPa2UlbOAXDVhZCRsYIw8rK9cP6F2ow3X+Eh/YYI4v6C0UPbgeqvDKSnxgihIe8WKKyMAKfuIDQyRcfClu4AP68+hW04ezq+MGHvCOJ/tsXyYlivbgJ17hq1O8KAAAAABJRU5ErkJggg==" InformativeScreenshot="fec4d6905a26d90100d76f650d36e4dc.jpg" Selector="&lt;html app='chrome.exe' title='Mi MDA Iniciar Sesión en Mi MDA' /&gt;" Title="Mi MDA Iniciar Sesión en Mi MDA" Url="https://mi.mda.gba.gob.ar/sistemas/mi/login" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
